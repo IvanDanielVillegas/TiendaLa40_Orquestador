@@ -21,7 +21,7 @@ def edit_instance(model, id, datos):
     instance = model.query.filter_by(id=id).all()[0]
     instance.status_carrito = datos["estado"]
     instance.date_carrito = datos["fecha"]
-    instance.customer_id_fk = datos["customer_id"]
+    instance.customer_id_fk = datos["customer_id_fk"]
     commit_changes()
     
 
